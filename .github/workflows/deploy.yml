@@ -1,42 +1,43 @@
 name: Deploy
+
 on:
   push:
-    branches: main
+    branches: [main]
   pull_request:
-    branches: main
+    branches: [main]
 
 jobs:
   deploy:
-    name: Deploy
+    name: Deploy to Deno
     runs-on: ubuntu-latest
 
     permissions:
-      id-token: write # Needed for auth with Deno Deploy
-      contents: read # Needed to clone the repository
+      id-token: write  # For Deno Deploy auth
+      contents: read   # To checkout repo contents
 
     steps:
-      - name: Clone repository
+      - name: 📥 Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Install Deno
+      - name: 🦕 Setup Deno
         uses: denoland/setup-deno@v1
         with:
           deno-version: v1.x
 
-      - name: Install Node.js
+      - name: 🧰 Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: lts/*
+          node-version: 'lts/*'
 
-      - name: Install step
-        run: "npm install"
+      - name: 📦 Install Dependencies
+        run: npm install
 
-      - name: Build step
-        run: "npm run build"
+      - name: 🔨 Build Project
+        run: npm run build
 
-      - name: Upload to Deno Deploy
+      - name: 🚀 Deploy to Deno
         uses: denoland/deployctl@v1
         with:
-          project: "odyssey-theme"
-          entrypoint: "https://jsr.io/@std/http/1.0.7/file_server.ts"
+          project: "out-of-scope" # update to your actual project name on Deno Deploy
+          entrypoint: "main.ts"   # should be a proper Deno script, not file_server.ts
           root: "dist"
