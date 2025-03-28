@@ -1,10 +1,5 @@
-<p align="center">
-  <img src="assets/gh-banner.png" alt="QX2025 Banner">
-</p>
-
-<br/>
 <div align="center">
-  <a href="https://ronbronson.com">
+  <a href="https://ronbronson.design">
     <img src="https://img.shields.io/badge/built_by-Ron%20Bronson-blue?style=flat-square" alt="Built by Ron Bronson" />
   </a>
   <a href="https://consequencedesign.org">
