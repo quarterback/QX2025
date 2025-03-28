@@ -1,92 +1,78 @@
 ---
-import { Container, FeatureCard } from '@components/odyssey-theme';
-
 import Layout from '../layouts/Page.astro';
-import HomeHeroSection from '../components/sections/heros/HomeHeroSection.astro';
 ---
 
 <Layout>
-	<HomeHeroSection />
-	<Container>
-		<section class="feature-card__section">
-			<h2>Landing Pages</h2>
-			<p>
-				Use one of our landing pages to jumpstart your website or
-				ad campaign.
-			</p>
-			<div class="feature-card__grid">
-				<FeatureCard href="/landing-pages/landing-1" title="Landing Page 1" imgSrc="/assets/images/home/screenshots/landing-1">
-				</FeatureCard>
-				<FeatureCard href="/landing-pages/landing-2" title="Landing Page 2" imgSrc="/assets/images/home/screenshots/landing-2">
-				</FeatureCard>
-			</div>
-		</section>
-	</Container>
+  <section class="intro-wrapper">
+    <h1 class="site-title">Out of Scope</h1>
+    <p class="subtitle">A journal of consequence, hype, interface, and failure.</p>
 
-	<Container>
-		<section class="feature-card__section">
-			<h2>Company Pages</h2>
-			<p>
-				Use one of our prebuilt company pages for your about page, contact page,
-				legal pages, blog posts, etc.
-			</p>
-			<div class="feature-card__grid">
-				<FeatureCard href="/company/about" title="About Page" imgSrc="/assets/images/home/screenshots/about">
-				</FeatureCard>
-				<FeatureCard href="/company/contact" title="Contact Page" imgSrc="/assets/images/home/screenshots/contact">
-				</FeatureCard>
-				<FeatureCard href="/blog/" title="Blog Page" imgSrc="/assets/images/home/screenshots/blog">
-				</FeatureCard>
-				<FeatureCard
-					href="/blog/posts/remote-work-mental-health"
-					title="Blog Post"
-          imgSrc="/assets/images/home/screenshots/blog-post"
-				>
-				</FeatureCard>
-				<FeatureCard
-					href="/company/legal"
-					imgSrc="/assets/images/home/screenshots/legal"
-					title="Legal Page"
-				>
-				</FeatureCard>
-			</div>
-		</section>
-	</Container>
-
-	<Container>
-		<section class="feature-card__section">
-			<h2>Theme Pages</h2>
-			<p>Learn more about how to set up and use the Odyssey Theme.</p>
-			<div class="feature-card__grid">
-				<FeatureCard
-					href="/theme/get-started"
-					imgSrc="/assets/images/home/screenshots/get-started"
-					title="Get Started"
-				>
-				</FeatureCard>
-				<FeatureCard
-					href="/theme/style-guide"
-					imgSrc="/assets/images/home/screenshots/style-guide"
-					title="Style Guide"
-				>
-				</FeatureCard>
-			</div>
-		</section>
-	</Container>
+    <div class="intro-text">
+      <p>
+        <strong>Out of Scope</strong> is a real-time field journal for tracking the shifting terrain of mediated life. It documents system failures, interface politics, hype cycles, and institutional obsolescence—using the lens of <a href="https://consequencedesign.org" class="underline">Consequence Design</a>.
+      </p>
+      <p>
+        This is not a blog. Not a newsletter. Not a whitepaper graveyard. It’s where I map live hypotheses and friction points in our techno-social environment, piece by piece.
+      </p>
+      <p>
+        If something felt off but didn’t quite make the news cycle, you’ll probably find it here.
+      </p>
+      <p class="mt-6">
+        <a href="/journal" class="journal-link">Read the latest journal entries →</a>
+      </p>
+    </div>
+  </section>
 </Layout>
 
 <style>
-	.feature-card__section {
-		margin: var(--section-margin) auto;
-	}
-	.feature-card__grid {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: var(--theme-grid-gap);
-	}
-	@media (max-width: 768px) {
-		.feature-card__grid {
-			grid-template-columns: 1fr;
-		}
-	}
+  .intro-wrapper {
+    max-width: 720px;
+    margin: 6rem auto;
+    padding: 0 1.5rem;
+  }
+
+  .site-title {
+    font-family: 'Martel', serif;
+    font-size: 2.75rem;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #1f1f1f;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    font-family: 'Martel', serif;
+    font-size: 1.25rem;
+    color: #666;
+    margin-bottom: 2.5rem;
+  }
+
+  .intro-text p {
+    font-family: 'Martel', serif;
+    font-size: 1.125rem;
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
+    color: #3a3a3a;
+  }
+
+  .journal-link {
+    font-family: monospace;
+    font-size: 1rem;
+    color: #1e40af;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 640px) {
+    .site-title {
+      font-size: 2rem;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+    }
+
+    .intro-text p {
+      font-size: 1rem;
+    }
+  }
 </style>
