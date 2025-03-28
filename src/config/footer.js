@@ -1,80 +1,59 @@
 export const footerSocials = [
   {
-    name: 'Twitter',
-    url: 'https://twitter.com/jaydanurwin',
-    icon: "mdi:twitter",
+    name: 'GitHub',
+    url: 'https://github.com/quarterback',
+    icon: 'mdi:github',
   },
   {
-    name: 'Youtube',
-    url: 'https://youtube.com/@jaydanurwin',
-    icon: "mdi:youtube",
+    name: 'Instagram',
+    url: 'https://instagram.com/ronbronson',
+    icon: 'mdi:instagram',
   },
   {
-    name: 'Github',
-    url: 'https://github.com/jaydanurwin',
-    icon: "mdi:github",
+    name: 'Bluesky',
+    url: 'https://bsky.app/profile/ronbronson.bsky.social',
+    icon: 'mdi:cloud',
   },
   {
-    name: 'Discord',
-    url: 'https://astro.build/chat',
-    icon: "ic:baseline-discord",
+    name: 'FPBC Podcast',
+    url: 'https://futureperfectbook.club',
+    icon: 'mdi:microphone',
   },
-]
+];
 
 export const footerLists = [
-	{
-		title: 'Landing Pages',
-		items: [
-			{
-				title: 'Landing Page 1',
-				slug: '/landing-pages/landing-1',
-			},
-			{
-				title: 'Landing Page 2',
-				slug: '/landing-pages/landing-2',
-			},
-      // {
-			// 	title: 'Landing Page 3',
-			// 	slug: '/landing-pages/landing-3',
-			// },
-		],
-	},
-	{
-		title: 'Company',
-		items: [
-			{
-				title: 'About',
-				slug: '/company/about',
-			},
-			{
-				title: 'Blog',
-				slug: '/blog',
-			},
-			{
-				title: 'Contact',
-				slug: '/company/contact',
-			},
-		],
-	},
-	{
-		title: 'Theme',
-		items: [
-			{
-				title: 'Get Started',
-				slug: '/theme/get-started',
-			},
-			{
-				title: 'Style Guide',
-				slug: '/theme/style-guide',
-			},
+  {
+    title: 'Site',
+    items: [
       {
-        title: 'Theme Setup',
-        slug: '/theme/theme-setup',
+        title: 'Home',
+        slug: '/',
       },
       {
-        title: 'Customizing Odyssey',
-        slug: '/theme/customizing-odyssey',
-      }
-		],
-	},
+        title: 'Journal',
+        slug: '/journal',
+      },
+      {
+        title: 'About',
+        slug: '/company/about',
+      },
+    ],
+  },
+  {
+    title: 'Research',
+    items: [
+      {
+        title: 'Glossary',
+        slug: '/glossary',
+      },
+      {
+        title: 'Referee Theory',
+        slug: '/journal/posts/referee-theory',
+      },
+      {
+        title: 'Interface Coup',
+        slug: '/journal/posts/interface-coup',
+      },
+    ],
+  },
 ];
