@@ -1,71 +1,72 @@
 <p align="center">
-  <img src="assets/gh-banner.png" alt="Odyssey Theme Banner">
+  <img src="assets/gh-banner.png" alt="QX2025 Banner">
 </p>
 
 <br/>
 <div align="center">
-  <a href="https://twitter.com/jaydanurwin">
-  <img src="assets/twitter-badge.svg" alt="Follow Jaydan Urwin on Twitter"/>
-</a>
-  <a href="https://sapling.lemonsqueezy.com/checkout/buy/9b78751f-6382-442d-ac99-32c2318b70a0">
-    <img src="assets/sponsor-badge.svg" alt="Sponsor This Repo" />
+  <a href="https://ronbronson.com">
+    <img src="https://img.shields.io/badge/built_by-Ron%20Bronson-blue?style=flat-square" alt="Built by Ron Bronson" />
+  </a>
+  <a href="https://consequencedesign.org">
+    <img src="https://img.shields.io/badge/read-more_at_consequencedesign.org-purple?style=flat-square" alt="Read more at consequencedesign.org" />
   </a>
 </div>
+
 <br/>
 
-# Odyssey Theme
+# QX2025 (Odyssey Fork)
 
-Odyssey Theme is a modern theme/starter for a business or startup's marketing website. It provides landing page examples, a full-featured blog, contact forms, and more. It is fully themeable to match your business' branding and style. It even includes a theme switcher component to show how easily the entire style of the site can be changed with only a few lines of CSS.
+**QX2025** is a minimalist publishing system for critical design writing, strategic foresight, and cultural theory. It is a heavily modified fork of the Odyssey Astro theme, rebuilt to host a growing archive of research, essays, and frameworks around consequence design, interface politics, and hype studies.
 
-## Features
+This site is built using [Astro](https://astro.build), focused on performance, legibility, and timeless web aesthetics. It’s meant for writing that endures—not for launch week hype.
 
-<p align="center">
-  <img src="assets/lh-screenshot.png" alt="Screenshot of perfect score in Lighthouse benchmark">
-</p>
+## What's Different in This Fork?
 
+- 🎨 **Custom Global Styles** – Rewritten global stylesheet using Google Fonts (`Martel`, `IBM Plex Mono`) for an editorial look with clear hierarchy.
+- ✍️ **Content-First Philosophy** – Designed for longform text, citations, and structured writing over flashy marketing blocks.
+- 🧠 **Integrated Theoretical Frameworks** – Built to showcase critical research projects like Interface Memetics, Crisis Cascades, and Consequence Design.
+- 📚 **Speculative Design Focus** – Not a startup boilerplate. This fork is optimized for thought leadership, cultural criticism, and systems thinking.
 
-- ✅ **A perfect score in Lighthouse**
-- ✅ **Blazing fast performance thanks to Astro 🚀**
-- ✅ **A Full Featured Blog with Tagging**
-- ✅ **Fully theme-able styles with for buttons, shapes, backgrounds, surfaces, etc.**
-- ✅ **Responsive, mobile-friendly landing pages**
-- ✅ **SEO Best Practices (Open Graph, Canonical URLs, sitemap)**
-- ✅ **Performant Local Fonts Setup**
-- ✅ **Contact Forms Setup for Netlify, Formspree, Formspark, etc.**
-- ✅ **A package of ready-to-use UI components**
-
-
-## Demo
-
-View a [live demo](https://odyssey-theme.sapling.supply/) of the Odyssey Theme.
-
-## Documentation
-
-1. View the [Theme Setup Guide](https://odyssey-theme.sapling.supply/theme/theme-setup)
-2. View the [Customizing the Theme Guide](https://odyssey-theme.sapling.supply/theme/customizing-odyssey)
-
-## Usage
+## Setup
 
 ```bash
-cd theme
-
+git clone https://github.com/quarterback/QX2025.git
+cd QX2025
 npm install
-
-npm start
+npm run dev
 ```
+
+Then open [http://localhost:4321](http://localhost:4321) in your browser.
+
+## Customizing
+
+Start by editing the site metadata in `src/config/settings.js`:
+
+```js
+export default {
+  title: `Out of Scope`,
+  description: `Writing at the edge of consequence, interface, and institutional design.`,
+  url: `https://consequencedesign.org`, // Or wherever you deploy
+  name: `QX2025`,
+  enableThemeSwitcher: false,
+};
+```
+
+Then swap out global styles in `src/styles/global.css` and edit nav items via `src/config/nav.js`.
 
 ## Deploy
 
-Feel free to deploy and host your site on your favorite static hosting service such as Netlify, Firebase Hosting, Vercel, GitHub Pages, etc.
+You can deploy this to [Netlify](https://netlify.com), [Vercel](https://vercel.com), or any static host.
 
-Astro has [an in-depth guide](https://docs.astro.build/en/guides/deploy/) on how to deploy an Astro project to each service.
+Here’s how to build for production:
 
-## Sponsor
+```bash
+npm run build
+```
 
-If you find this theme useful, please consider donating to support the continued development of it with the link below
+Then follow [Astro’s deployment guide](https://docs.astro.build/en/guides/deploy/) for your platform of choice.
 
-[Donate to Odyssey Theme](https://sapling.lemonsqueezy.com/checkout/buy/9b78751f-6382-442d-ac99-32c2318b70a0)
+## Credit
 
-## Support
+This fork was originally based on the [Odyssey Astro Theme](https://github.com/treefarmstudio/odyssey-theme) by [Jaydan Urwin](https://twitter.com/jaydanurwin). Major thanks to them for open sourcing a clean, extensible theme.
 
-Please feel free to post issues or submit PRs to this repo and we will do our best to respond in a timely manner, keeping in mind this template is offered for free as is on GitHub.
